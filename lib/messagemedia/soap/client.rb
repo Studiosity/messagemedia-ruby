@@ -53,7 +53,7 @@ module Messagemedia
         # Construct a Message object to represent the message
         message = Message.new
         message.content = content
-        message.delivery_report = true
+        message.delivery_report = false
         message.format = FORMAT_SMS
         message.validity_period = 1
         message.origin = source_number

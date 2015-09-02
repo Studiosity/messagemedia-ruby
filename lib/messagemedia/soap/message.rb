@@ -21,7 +21,7 @@ module Messagemedia
       #
       def initialize
         @recipients = []
-        @delivery_report = true
+        @delivery_report = false
         @validity_period = 1
         @sequence_number = 0
         @format = FORMAT_SMS
