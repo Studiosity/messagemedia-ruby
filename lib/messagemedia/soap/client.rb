@@ -47,12 +47,12 @@ module Messagemedia
       # If a source number is not provided, the message will be sent using
       # the MessageMedia rotary.
       #
-      def send_message(destination_number, content, message_id, source_number = nil)
+      def send_message(destination_number, content, message_id = nil, source_number: nil, delivery_report: true)
 
         # Construct a Message object to represent the message
         message = Message.new
         message.content = content
-        message.delivery_report = false
+        message.delivery_report = delivery_report
         message.format = FORMAT_SMS
         message.validity_period = 1
         message.origin = source_number
